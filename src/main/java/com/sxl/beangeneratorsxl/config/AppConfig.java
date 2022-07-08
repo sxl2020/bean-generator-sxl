@@ -43,20 +43,4 @@ public class AppConfig {
         this.swaggerEnable = false;
         this.lombokEnable = true;
     }
-
-    public static class ExistFileConverter extends FileConverter{
-        @Override
-        public File convert(String value) {
-            File file = super.convert(value);
-            if(file == null || !file.exists() || !file.isFile() ){
-                return null;
-            }
-            return file;
-        }
-    }
-
-
-
-
-
 }

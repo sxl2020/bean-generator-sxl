@@ -21,6 +21,12 @@ public class BeanConfig {
     private File file;
 
 
+    /**
+     * excel表格中，表的每列对应的Java类中属性的组成部分：
+     * Java类中成员的组成包括：
+     * 类成员变量名称（FIELD_NAME），类成员变量数据类型（FIELD_TYPE），类成员变量注释（FIELD_NOTE），类成员变量注解（FIELD_CONSTRAINT）
+     * Map中，key为上述枚举，value为excel中对应的列号。从0开始计数。
+     */
     private HashMap<ExcelHeadEnum,Integer> excelHeadIndexMap;
 
     /**
